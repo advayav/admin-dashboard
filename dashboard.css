@@ -7,25 +7,24 @@ body{
 
 .main-grid{
     display: grid;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
-    grid-template: 0.85fr 1fr 1fr 1fr / 0.65fr 1fr 1fr 1fr;
+    grid-template: 20% 80%/15% 85%;
     border: solid black 2px;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
 .left-panel{
-    grid-row: 1 / 6;
-    grid-column: 1 / 1;
+    grid-row: 1/3;
+    grid-column: 1 / 2;
     background-color: rgb(236, 207, 240);
     box-sizing: border-box;
     overflow: hidden;
 }
 
 .top-navbar{
-    grid-row: 1;
-    grid-column: 2/6;
+    grid-row: 1/2;
+    grid-column: 2/3;
     box-shadow: 0 5px 5px rgba(128, 128, 128, 0.3);
     background-color: white;
     box-sizing: border-box;
@@ -33,14 +32,16 @@ body{
     justify-content: center;
     display: flex;
     flex-direction: column;
+    padding: 30px 20px 50px 20px;
 }
 
 .main-body{
-    grid-row: 2/6;
-    grid-column: 2/6;
+    grid-row: 2;
+    grid-column: 2;
     background-color: rgba(225,232,240,255);
     box-sizing: border-box;
     overflow: hidden;
+    padding: 10px;
 }
 
 .logo{
@@ -96,7 +97,7 @@ body{
 .search-bar{
     display: flex;
     align-items: center;
-    padding: 30px 20px 20px 50px;
+    padding: 50px 20px 20px 50px;
     box-sizing: border-box;
     /* border: solid black 4px; */
     /* align-self: start; */
@@ -120,8 +121,7 @@ body{
 .right-side{
     display: flex;
     align-items: center;
-    padding: 20px;
-    padding-right: 40px;
+    padding: 40px 40px 0 20px;
     box-sizing: border-box;
     /* align-self: start; */
 }
@@ -195,34 +195,134 @@ body{
 
 .mainbody-grid{
     display: grid;
-    border: solid black 2px;
     box-sizing: border-box;
-    grid-template-columns: 1.2fr 1.2fr 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50% 50%;
     height: 100%;
     width: 100% ;
     box-sizing: border-box;
     overflow: hidden;
+    /* gap: 5px; */
 }
 
 .projects{
-    grid-row: 1/7;
-    grid-column: 1/3;
-    border: solid blue 2px;
+    grid-row: 1/3;
+    grid-column: 1;
     box-sizing: border-box;
+}
+
+.body-heading{
+    display: inline-block;
+    padding: 15px 0 10px 20px;
+    /* padding-top: 0px; */
+    font-size: large;
+    font-weight: bold;
+}
+
+.proj-tiles{
+    display: grid;
+    grid-template: 33% 33% 33% / 50% 50%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    row-gap: 15px;
+}
+
+.proj-tile{
+    margin-top: 0;
+    padding: 20px 15px;
+    background-color: white;
+    width: 430px; 
+    height: 140px;
+    border-left: solid rgb(250, 209, 74) 6px;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(128, 128, 128, 0.7);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.proj-name{
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0 5px 0;
+}
+
+.tile-img{
+    text-align : right;
+    padding-right: 10px;
+}
+
+.tile-icon{
+    width: 20px;
+    height: 20px;
 }
 
 .announce{
-    grid-row: 1/4;
-    grid-column: 3;
-    border: solid green 2px;
+    grid-row: 1;
+    grid-column: 2;
     box-sizing: border-box;
+}
+
+.ann-sect{
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(128, 128, 128, 0.7);
+    width: 88%;
+    height: 76%;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.ann{
+    border-bottom: solid lightgray 2px;
+    font-size: small;
+    padding: 6px;
+}
+
+.ann-title{
+    font-weight: bold;
+}
+
+#privpol-ann{
+    border: none;
 }
 
 .trending{
-    grid-row: 4/7;
-    grid-column: 3;
-    border: solid red 2px;
+    grid-row: 2;
+    grid-column: 2;
     box-sizing: border-box;
 }
 
+.trend-sect{
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(128, 128, 128, 0.7);
+    width: 80%;
+    height: 60%;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.trnd{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 3.5px 0;
+}
+
+.trnd-img{
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    align-items: top;
+}
+
+.trnd-acct{
+    align-items: center;
+    font-size: small;
+    text-align: left;
+}
